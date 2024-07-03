@@ -9,8 +9,8 @@ class AppException implements Exception {
   static const String NET_CONNECT_ERROR = "网络未连接，请检查后重试";
   static const String TOO_MANY_REQUEST = "顾客太多，请稍等";
 
-  late final String message;
-  late final int code;
+  late final int? code;
+  late final String? message;
 
   AppException(this.code, this.message);
 
@@ -71,10 +71,10 @@ class AppException implements Exception {
 
 /// 请求错误
 class BadRequestException extends AppException {
-  BadRequestException([code, message]) : super(code, message);
+  BadRequestException([super.code, super.message]);
 }
 
 /// 未认证异常
 class UnauthorisedException extends AppException {
-  UnauthorisedException([code, message]) : super(code, message);
+  UnauthorisedException([super.code, super.message]);
 }

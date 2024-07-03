@@ -1,16 +1,17 @@
 import 'dart:convert';
+
 import 'package:dio/dio.dart';
-import 'package:get_demo/net/result.dart';
 
 import '../util/log_util.dart';
+import 'result.dart';
 
 class ApiResultInterceptor extends Interceptor {
   @override
   Future<void> onResponse(
-      Response resp, ResponseInterceptorHandler handler) async {
-    var decode = utf8.decode(resp.data);
+      Response<dynamic> resp, ResponseInterceptorHandler handler) async {
+    final String decode = utf8.decode(resp.data as List<int>);
     resp.data = json.decode(decode);
-    String urlPath = resp.requestOptions.path;
+    final String urlPath = resp.requestOptions.path;
     logD('response-urlPath--->:$urlPath');
     logD('response--->:${json.encode(resp.data)}');
     /// http error错误处理
