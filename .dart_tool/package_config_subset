@@ -1,3 +1,7 @@
+get_demo
+2.19
+file:///Users/git_workspace/flutter_getx_demo/
+file:///Users/git_workspace/flutter_getx_demo/lib/
 sky_engine
 3.2
 file:///Users/software/flutter/bin/cache/pkg/sky_engine/
@@ -498,8 +502,4 @@ yaml
 2.19
 file:///Users/sunzhengqian/.pub-cache/hosted/pub.flutter-io.cn/yaml-3.1.2/
 file:///Users/sunzhengqian/.pub-cache/hosted/pub.flutter-io.cn/yaml-3.1.2/lib/
-get_demo
-2.19
-file:///Users/work_space/gitx_demo-master/
-file:///Users/work_space/gitx_demo-master/lib/
 2
